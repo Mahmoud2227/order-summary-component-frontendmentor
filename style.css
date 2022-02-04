@@ -1,0 +1,167 @@
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(./images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    font-size: 16px;
+    background-color: var(--Pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.card {
+    width: 335px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius:15px;
+    background-color: white;
+}
+
+.card > div:not(.image) {
+    margin: 0 20px;
+}
+
+.card .image,
+.card .image img {
+    width: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.card .info h1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card .info p {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+    color:var(--Desaturated-blue) ;
+    margin: 20px 10px;
+}
+
+.card .plan {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--Very-pale-blue);
+    border-radius: 10px;
+}
+
+.card .plan object {
+    margin-right: 20px;
+}
+
+.card .plan p {
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.card .plan p span {
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+}
+
+.card .plan a {
+    color:var(--Bright-blue);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.card .plan a:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.card .button {
+    background-color: var(--Bright-blue);
+    width: calc(100% - 40px);
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-top: 30px !important;
+    box-shadow: 0px 5px 20px 0px  var(--Desaturated-blue);
+    transition: all 0.2s;
+}
+
+.card .button:hover {
+    opacity: 0.7;
+}
+
+.card .cancel {
+    width: fit-content;
+    text-align: center;
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    margin-top: 30px !important;
+    margin-bottom: 40px !important;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.card .cancel:hover {
+    color: black;
+}
+
+@media (min-width:376px) {
+    body {
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-size: contain;
+    }
+
+    .card {
+        width: 400px;
+    }
+
+    .card > div:not(.image) {
+        margin: 0 40px;
+    }
+
+    .card .plan{
+        width: calc(100% - 80px);
+
+    }
+
+    .card .button {
+        width: calc(100% - 80px);
+        cursor: pointer;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 5px;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
